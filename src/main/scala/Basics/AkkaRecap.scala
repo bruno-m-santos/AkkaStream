@@ -1,5 +1,7 @@
-import akka.actor.SupervisorStrategy.{Restart, Stop}
-import akka.actor.{Actor, ActorLogging, ActorSystem, Kill, OneForOneStrategy, PoisonPill, Props, Stash, SupervisorStrategy}
+package Basics
+
+import akka.actor.SupervisorStrategy.Stop
+import akka.actor.{Actor, ActorLogging, ActorSystem, OneForOneStrategy, Props, Stash, SupervisorStrategy}
 import akka.util.Timeout
 
 object AkkaRecap extends App{
@@ -80,9 +82,9 @@ object AkkaRecap extends App{
 
   //scheduler
 
-  import scala.concurrent.duration._
   import system.dispatcher
 
+  import scala.concurrent.duration._
   import scala.language.postfixOps
 //  system.scheduler.scheduleOnce(2 seconds) {
 //    actor ! "delayed Hello"

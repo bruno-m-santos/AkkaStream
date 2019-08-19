@@ -1,8 +1,8 @@
+package Basics
+
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.{Flow, Keep, Sink, Source}
-
-import scala.util.{Failure, Success}
 
 object MaterializingStream extends App {
 
@@ -16,7 +16,6 @@ object MaterializingStream extends App {
   //val source = Source(1 to 10).to(Sink.reduce[Int]((a,b) =>  a+ b))
 //  val sink = Sink.reduce[Int]((a,b) => a + b)
 //  val someFuture = source.runWith(sink)
-  import scala.concurrent.ExecutionContext.Implicits.global
 //  someFuture.onComplete{
 //    case Success(value) =>  println(s"Sucess $value")
 //    case Failure(exception) => print("Failure")

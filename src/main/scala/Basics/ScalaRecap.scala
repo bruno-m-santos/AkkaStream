@@ -1,3 +1,5 @@
+package Basics
+
 import scala.concurrent.Future
 import scala.util.{Failure, Success}
 
